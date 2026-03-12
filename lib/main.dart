@@ -74,7 +74,26 @@ class MainApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.white
                   ))),
-              ])
+              ]),
+              Container(
+                alignment: Alignment.centerRight,
+                child: ElevatedButton(onPressed: (){
+                    print("Hola mundo botón 3");
+                  }, style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ), child: Text("+", style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  )))
+              )
+              
             ]
           ),
         ),
