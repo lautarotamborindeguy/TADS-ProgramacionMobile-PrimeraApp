@@ -13,36 +13,67 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("App test"),
-          backgroundColor: Colors.amber,
-          foregroundColor: Colors.black,
-          centerTitle: true,
+          title: Text("Ejemplo de layout"),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white
         ),
         body: Container(
           margin: EdgeInsets.all(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [Text("Contenido", style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Colors.amber
+            children: [
+              Text("Bienvenido al ejemplo", style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.black
               )),
-              ElevatedButton(onPressed: (){
-                print("Hola mundo");
-              }, child: Text("Salvar")),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.indigo, width: 4.0),
+                  borderRadius: BorderRadius.circular(10.0), //
+                ),
+                padding: const EdgeInsets.all(30),
+                child: const Text(
+                  "Ejemplo", style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black
+              )),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text("Row child 1", style: TextStyle(
+                  ElevatedButton(onPressed: (){
+                    print("Hola mundo botón 1");
+                  }, style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ), child: Text("Botón 1 ", style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.amber,
-                  )),
-                  Text("Row child 2", style: TextStyle(
+                    color: Colors.white
+                  ))),
+                  ElevatedButton(onPressed: (){
+                    print("Hola mundo botón 2");
+                  }, style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ), child: Text("Botón 2 ", style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.amber
-                  )),
+                    color: Colors.white
+                  ))),
               ])
             ]
           ),
